@@ -1,0 +1,11 @@
+idlj -fall -oldImplBase vmitglied.idl
+
+javac *.java Verein/*.java
+
+killall tnameserv
+
+tnameserv -ORBInitialPort 1050 &
+
+#java VereinsMitgliedServer -ORBInitialHost localhost -ORBInitialPort 1050
+
+#java VereinsMitgliedClient -ORBInitialHost localhost -ORBInitialPort 1050
